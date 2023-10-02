@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+## Inspiration:
+I believe that the strength of Metaphor is that it can give tailored search results that a simple Google search just isn’t built to do right now. For instance, tailoring results based on who the user is (prompting the query by saying you’re a child or perhaps a teacher) or writing full paragraphs with many details. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For me, one of my favorite hobbies is DnD, and I actually run my own games. Part of running those games is coming up with a story and creating encounters, which can be hard. Coming up with things from scratch is rewarding, since it is all my own, but it’s difficult and long to do without a base. 
 
-## Available Scripts
+My inspiration for this project is creating a simple web app that allows Dungeon Masters (DM) like me to query the Metaphor API for different aspects of the game they might want to run. For instance, finding links to similar existing one-shots based on the plot idea someone might have, finding links or summaries to stories and mythos that the DM might want to base the adventure on, or finding links to different DnD monsters they might be interested in running. 
 
-In the project directory, you can run:
 
-### `npm start`
+## The key components:
+`A field in which the user can enter their plot to find one-shots with similar plots`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Returns a list of titles and links the user can reference or check out
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`A field in which the user can enter different words to find a story with those aspects (for instance, the user can enter “dragons” and “princesses” to find a story with dragons and princesses)`
 
-### `npm test`
+Returns a list of titles and links. Has a button to summarize the story. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`A field in which the user can pull DnD monsters based on different attributes they want the monster to have`
 
-### `npm run build`
+Returns a list of titles and links. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`A field in which users can find real (and by real, I mean monsters from real myths) monsters to base their DnD monster off of. `
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Returns a list of titles and links. Has a button to summarize the story. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+The idea of this project is to give DMs a tool in which they can easily find different components of their one-shot. For monster hunting specifically, it can take hours to find a suitable base (depending on how stringent you are and how comfortable you are with adjusting the monster yourself). 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Implementation
+React and Javascript are my languages of choice since this is meant to be a web-app. The different sections I outlined above will be literal sections in the web app. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I used a free trial with MeaningCloud to get the API key needed to summarize the contents of some of the HTML pages, specifically the ones from the stories and monster legends lookup. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To protect my API keys, I used a .env file. To run the app, you’ll need to have dotenv installed.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Running the app
+To run the app, make sure you're in the nat20-investigation-check folder, and run `npm start`. This will run the app locally.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In order to use the Metaphor and MeaningCloud APIs, you will need their respective API token. Make sure you have `dotenv` installed, and created an `.env` file to store your API keys. 
 
-### Code Splitting
+They should be stored like such:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+-----
+// for Metaphor
 
-### Analyzing the Bundle Size
+REACT_APP_METAPHOR_KEY = your_key_here
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+// for MeaningCloud
 
-### Making a Progressive Web App
+REACT_APP_MEANING_CLOUD_KEY = your_key_here
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
+Since this a React app, you need `REACT_APP_` and the start of the key name.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import './OneshotQuery'
+import OneshotQuery from './OneshotQuery';
+import DnDMonsterQuery from './DnDMonsterQuery';
+import MythQuery from './MythQuery';
+import MonsterQuery from './MonsterQuery';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <OneshotQuery></OneshotQuery>
+      <DnDMonsterQuery></DnDMonsterQuery>
+      <MythQuery></MythQuery>
+      <MonsterQuery></MonsterQuery>
+
     </div>
   );
 }
