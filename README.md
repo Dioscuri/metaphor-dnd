@@ -38,7 +38,7 @@ To protect my API keys, I used a .env file. To run the app, you’ll need to hav
 ---
 
 ### Running the app
-To run the app, make sure you're in the nat20-investigation-check folder, and run `npm start`. This will run the app locally.
+To run the app, make sure you're in the project folder, and run `npm start`. This will run the app locally.
 
 In order to use the Metaphor and MeaningCloud APIs, you will need their respective API token. Make sure you have `dotenv` installed, and created an `.env` file to store your API keys. 
 
